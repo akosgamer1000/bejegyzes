@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Random;
+
 public class bejegyzések {
     Random r=new Random();
     List<Bejegyzés> s=new ArrayList<Bejegyzés>();
@@ -88,5 +89,11 @@ public class bejegyzések {
             }
         }
         System.out.println("A 15 nél kissebek száma:"+count);
+    }
+    public void rendezés(){
+        s.sort((o1, o2)
+                -> o2.getLikeok().compareTo(
+                o1.getLikeok()));
+
     }
 }

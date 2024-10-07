@@ -33,5 +33,8 @@ public class Main {
             s.maxlike();
             s.vane35();
             s.lessten();
+            s.rendezés();
+        System.out.println("------");
+            s.readall();
         }
     }
