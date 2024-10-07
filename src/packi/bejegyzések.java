@@ -1,9 +1,6 @@
 package packi;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -94,6 +91,18 @@ public class bejegyzések {
         s.sort((o1, o2)
                 -> o2.getLikeok().compareTo(
                 o1.getLikeok()));
+        File myObj = new File("ordertar.txt");
+        try {
+            FileWriter myWriter = new FileWriter("ordertar.txt");
+            for(var k:s){
+                myWriter.write(k.toString());
 
+            }
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 }

@@ -35,6 +35,6 @@ public class Main {
             s.lessten();
             s.rendezés();
         System.out.println("------");
-            s.readall();
+
         }
     }
